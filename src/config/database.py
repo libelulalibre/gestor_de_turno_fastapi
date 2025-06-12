@@ -6,9 +6,9 @@ from src.config.settings import settings
 # Usa settings.encoded_db_url si hay caracteres especiales en la contraseña,
 # o settings.database_url si no los hay.
 engine = create_engine(
-    settings.encoded_db_url,  # ¡Corregido! Usa la URL codificada.
-    pool_pre_ping=True,      # Maneja reconexiones automáticamente
-    echo=True                # Muestra SQL en consola (útil para desarrollo)
+    settings.database_url,  # ¡Corrige a minúsculas!
+    pool_pre_ping=True,
+    echo=True
 )
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
@@ -22,3 +22,5 @@ def get_db():
         yield db
     finally:
         db.close()
+
+        

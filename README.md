@@ -1,4 +1,23 @@
-gestor_turno_fastapi/
+# Gestor de Turnos con FastAPI
+
+API para gestión de turnos médicos con FastAPI.
+
+## Requisitos
+- Python 3.9+
+- Dependencias: `pip install -r requirements.txt`
+
+## Ejecución
+
+# uvicorn main:app --reload
+
+# Endpoints
+
+# API: http://127.0.0.1:8000
+
+# Docs: http://127.0.0.1:8000/docs
+
+
+# gestor_turno_fastapi/
 ├── venv/
 ├── .env
 ├── .gitignore
@@ -31,4 +50,4 @@ gestor_turno_fastapi/
 │   └── services/
 │       ├── __init__.py
 ├── tests/
-│   ├── __init__.py
+│   ├── __init__.py#

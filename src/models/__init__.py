@@ -1,4 +1,3 @@
-# src/models/__init__.py
 from src.config.database import Base
 from .user import User
 from .specialty import Specialty

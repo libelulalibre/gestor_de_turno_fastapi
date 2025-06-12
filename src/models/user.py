@@ -16,3 +16,7 @@ class User(Base):
     dni = Column(String, unique=True)
     is_active = Column(Boolean, default=True)
     role = Column(SQLEnum(UserRole), default=UserRole.PATIENT)
+
+# src/models/user.py
+
+
