@@ -5,6 +5,7 @@ from src.config.database import Base
 class UserRole(str, Enum):
     PATIENT = "patient"
     ADMIN = "admin"
+    DOCTOR = "doctor"  # Añadido para roles adicionales
 
 class User(Base):
     __tablename__ = "users"
@@ -16,7 +17,8 @@ class User(Base):
     dni = Column(String, unique=True)
     is_active = Column(Boolean, default=True)
     role = Column(SQLEnum(UserRole), default=UserRole.PATIENT)
-
-# src/models/user.py
-
-
+    
+    # Propiedad para compatibilidad con sistemas que esperan 'username'
+    @property
+    def username(self):
+        return self.email.split('@')[0]  # Deriva username del email

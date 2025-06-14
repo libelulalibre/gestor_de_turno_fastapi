@@ -1,0 +1,191 @@
+2025-06-14 15:50:20,891 - main - INFO - Iniciando aplicación...
+2025-06-14 15:52:18,208 - main - INFO - Iniciando aplicación...
+2025-06-14 16:25:06,412 - main - INFO - Iniciando aplicación...
+2025-06-14 16:38:44,649 - main - INFO - Iniciando aplicación...
+2025-06-14 16:41:36,732 - main - INFO - Iniciando aplicación...
+2025-06-14 16:45:07,205 - main - INFO - Iniciando aplicación...
+2025-06-14 16:53:13,216 - main - INFO - Iniciando aplicación...
+2025-06-14 17:00:57,535 - src.config.database - INFO - DB URL utilizada: postgresql://postgre...
+2025-06-14 17:02:09,285 - src.config.database - INFO - DB URL utilizada: postgresql+psycopg2://postgres:10102018@localhost:...
+2025-06-14 17:02:09,429 - main - INFO - Iniciando aplicación...
+2025-06-14 17:04:05,468 - src.services.auth_service - ERROR - Error en autenticación: 'utf-8' codec can't decode byte 0xab in position 96: invalid start byte
+2025-06-14 17:04:05,470 - src.config.database - ERROR - Error en sesión de DB: 401: Credenciales incorrectas
+2025-06-14 17:05:16,036 - src.services.auth_service - ERROR - Error en autenticación: 'utf-8' codec can't decode byte 0xab in position 96: invalid start byte
+2025-06-14 17:05:16,038 - src.config.database - ERROR - Error en sesión de DB: 401: Credenciales incorrectas
+2025-06-14 17:07:50,838 - src.config.database - INFO - DB URL utilizada: postgresql+psycopg2://postgres:10102018@localhost:...
+2025-06-14 17:08:13,080 - src.config.database - INFO - DB URL utilizada: postgresql+psycopg2://postgres:10102018@localhost:...
+2025-06-14 17:10:11,191 - src.config.database - INFO - DB URL utilizada: postgresql+psycopg2://postgres:10102018@localhost:...
+2025-06-14 17:10:23,352 - src.config.database - INFO - DB URL utilizada: postgresql+psycopg2://postgres:10102018@localhost:...
+2025-06-14 17:10:23,488 - main - INFO - Iniciando aplicación...
+2025-06-14 17:11:43,098 - src.services.auth_service - ERROR - Error en autenticación: 'utf-8' codec can't decode byte 0xab in position 96: invalid start byte
+Traceback (most recent call last):
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\src\services\auth_service.py", line 52, in authenticate_user
+    ).first()
+      ^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2241, in _execute_internal
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2110, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in _connection_for_bind
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3273, in connect
+    return self._connection_cls(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 713, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 179, in _do_get
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 675, in __init__
+    self.__connect()
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 901, in __connect
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\engine\create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xab in position 96: invalid start byte
+2025-06-14 17:11:43,126 - src.config.database - ERROR - Error en sesión de DB: 401: Credenciales incorrectas
+2025-06-14 17:15:12,735 - src.config.database - INFO - Inicializando conexión a la base de datos...
+2025-06-14 17:16:33,248 - src.config.database - INFO - DB URL utilizada: postgresql+psycopg2://postgres:10102018@localhost:...
+2025-06-14 17:16:33,377 - main - INFO - Iniciando aplicación...
+2025-06-14 17:21:53,849 - src.config.database - INFO - DB URL utilizada: postgresql+psycopg2://postgres:10102018@localhost:...
+2025-06-14 17:21:53,978 - main - INFO - Iniciando aplicación...
+2025-06-14 17:25:48,583 - src.services.auth_service - ERROR - Error en autenticación: 'utf-8' codec can't decode byte 0xab in position 96: invalid start byte
+Traceback (most recent call last):
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\src\services\auth_service.py", line 52, in authenticate_user
+    ).first()
+      ^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2241, in _execute_internal
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2110, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in _connection_for_bind
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3273, in connect
+    return self._connection_cls(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 713, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 179, in _do_get
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 675, in __init__
+    self.__connect()
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 901, in __connect
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\pool\base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\engine\create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicol\Documents\gestor_de_turnos_clonado_github\gestor_de_turno_fastapi\venv\Lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xab in position 96: invalid start byte
+2025-06-14 17:25:48,609 - src.config.database - ERROR - Error en sesión de DB: 401: Credenciales incorrectas
+2025-06-14 17:29:19,952 - src.config.database - INFO - DB URL utilizada: postgresql+psycopg2://postgres:10102018@localhost:...
+2025-06-14 17:30:42,849 - src.config.database - INFO - DB URL utilizada: postgresql+psycopg2://postgres:10102018@localhost:...
+2025-06-14 17:30:55,411 - src.config.database - INFO - DB URL utilizada: postgresql+psycopg2://postgres:10102018@localhost:...
+2025-06-14 17:31:18,993 - src.config.database - INFO - DB URL utilizada: postgresql+psycopg2://postgres:10102018@localhost:...
+2025-06-14 17:32:43,094 - src.config.database - INFO - DB URL utilizada: postgresql+psycopg2://postgres:10102018@localhost:...
+2025-06-14 17:33:32,660 - src.config.database - INFO - DB URL utilizada: postgresql+psycopg2://postgres:10102018@localhost:...
+2025-06-14 17:35:04,219 - src.config.database - INFO - DB URL utilizada: postgresql+psycopg2://postgres:10102018@localhost:...
+2025-06-14 17:36:26,430 - src.config.database - INFO - DB URL utilizada: postgresql+psycopg2://postgres:10102018@localhost:...
+2025-06-14 17:36:37,056 - src.config.database - INFO - DB URL utilizada: postgresql+psycopg2://postgres:10102018@localhost:...
+2025-06-14 17:36:44,584 - src.config.database - INFO - DB URL utilizada: postgresql+psycopg2://postgres:10102018@localhost:...
+2025-06-14 17:36:44,728 - main - INFO - Iniciando aplicación...
+2025-06-14 17:41:46,700 - src.config.database - INFO - DB URL utilizada: postgresql+psycopg2://postgres:10102018@localhost:...
+2025-06-14 17:41:46,852 - main - INFO - Iniciando aplicación...
