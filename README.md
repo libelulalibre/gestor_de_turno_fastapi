@@ -2,14 +2,6 @@
 
 API para gestión de turnos médicos con FastAPI.
 
-## Requisitos
-- Python 3.9+
-- Dependencias: `pip install -r requirements.txt`
-
-## Ejecución
-
-# uvicorn main:app --reload
-
 # Endpoints
 
 # API: http://127.0.0.1:8000
